@@ -6,6 +6,7 @@ SRCS = main.c \
 	functions/tic_tac_toe.c \
 	functions/print_tab.c \
 	functions/win_check.c \
+	functions/bot_play.c
 
 all: $(NAME)
 

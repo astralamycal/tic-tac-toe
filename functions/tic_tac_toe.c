@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include "print_tab.h"
 #include "win_check.h"
+#include "bot_play.h"
 
 // main script
 void tic_tac_toe()
@@ -34,9 +35,16 @@ void tic_tac_toe()
         else if (boardValues[choice - 1] == ' ') // only if spot not taken already
         {
             boardValues[choice - 1] = 'X'; // places the user input on the board
-            print_tab(boardValues);
-            counter++;
             winner = win_check(boardValues);
+            counter++;
+
+            if (winner == 0)
+            {
+                bot_play(boardValues); // makes the computer play
+                winner = win_check(boardValues);
+                counter++;
+            }
+            print_tab(boardValues);
         }
 
         else
