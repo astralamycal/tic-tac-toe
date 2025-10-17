@@ -3,7 +3,8 @@
 NAME = tic-tac-toe
 
 SRCS = main.c \
-	functions/tic-tac-toe.c \
+	functions/tic_tac_toe.c \
+	functions/print_tab.c
 
 all: $(NAME)
 

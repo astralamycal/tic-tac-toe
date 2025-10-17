@@ -1,11 +1,10 @@
 // insert imports here
 #include <stdlib.h>
 #include <stdio.h>
-#include "functions/tic_tac_toe.h"
+#include "print_tab.h"
 
 // main script
-int main()
+void tic_tac_toe()
 {
-    tic_tac_toe();
-    exit(0);
+    print_tab();
 }

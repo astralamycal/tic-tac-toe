@@ -1,6 +1,6 @@
 #ifndef __FUNCTIONS_H__
 #define __FUNCTIONS_H__
 
-// insert prototypes here
+void print_tab(); // char **tab
 
 #endif
