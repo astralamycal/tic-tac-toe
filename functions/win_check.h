@@ -1,6 +1,6 @@
-#ifndef __FUNCTIONS_H__
-#define __FUNCTIONS_H__
+#ifndef __WIN_CHECK_H__
+#define __WIN_CHECK_H__
 
-int win_check(char **board, int choice);
+int win_check(char *board);
 
 #endif

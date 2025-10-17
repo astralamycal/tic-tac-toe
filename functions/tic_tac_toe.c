@@ -15,9 +15,12 @@ void tic_tac_toe()
     {
         boardValues[counter] = ' ';
     }
+
     counter = 0;
     int choice = 0;
-    while (counter < 9) // handling of symbol placement
+    int winner = 0;
+
+    while (counter < 9 && winner == 0) // handling of symbol placement
     {
         printf("Choose where to put your symbol :");
         testValue = scanf("%d", &choice);               // gets the exit code of the scanf
@@ -33,12 +36,28 @@ void tic_tac_toe()
             boardValues[choice - 1] = 'X'; // places the user input on the board
             print_tab(boardValues);
             counter++;
+            winner = win_check(boardValues);
         }
 
         else
         {
             printf("This spot is already taken!\n");
         }
+    }
+
+    if (winner == 1)
+    {
+        printf("The user won!\n");
+    }
+
+    else if (winner == 2)
+    {
+        printf("The computer won!\n");
+    }
+
+    else
+    {
+        printf("It's a draw...\n");
     }
     free(boardValues);
 }
