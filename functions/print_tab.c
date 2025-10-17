@@ -4,7 +4,7 @@
 #include <unistd.h>
 
 // main script
-void print_tab(char **tab) // shows the state of the board
+void print_tab(char *tab) // shows the state of the board
 {
     system("clear");
     int counter = 0;
@@ -12,7 +12,7 @@ void print_tab(char **tab) // shows the state of the board
     {
         if ((counter + 1) % 3 == 0) // separation between lines
         {
-            printf(" %s \n", tab[counter]); // without end separation
+            printf(" %c \n", tab[counter]); // without end separation
             if (counter != 8)               // avoids making separation at the end
             {
                 printf("----------- \n");
@@ -21,7 +21,7 @@ void print_tab(char **tab) // shows the state of the board
 
         else
         {
-            printf(" %s |", tab[counter]);
+            printf(" %c |", tab[counter]);
         }
 
         counter++;
